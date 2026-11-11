@@ -1,0 +1,113 @@
+{
+  "models": [
+    {
+      "name": "qwen2_5_3b",
+      "label": "Qwen2.5-3B-Instruct",
+      "id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "contexts": [
+        512,
+        1024
+      ]
+    }
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "group_size": 3,
+  "rank_per_layer": 16,
+  "token_chunk": 64,
+  "cache_windows": 128,
+  "reference_cache_gib": 12,
+  "study_scope": "single_backbone_budgeted_confirmation",
+  "max_wall_hours": 5,
+  "methods": [
+    "bf16",
+    "eden_unbiased",
+    "drive",
+    "hqq1_key",
+    "diagonal",
+    "continued_diagonal",
+    "gaussian",
+    "csd",
+    "headwise",
+    "layerwise"
+  ],
+  "fit_articles": 16,
+  "tune_articles": 8,
+  "development_articles": 0,
+  "confirmation_articles": 32,
+  "long_confirmation_articles": 0,
+  "epochs": 6,
+  "lrs": [
+    0.001,
+    0.003
+  ],
+  "linear_lrs": [
+    0.0001,
+    0.001,
+    0.003
+  ],
+  "train_cuts": [
+    512
+  ],
+  "tune_cuts": [
+    512
+  ],
+  "suffix": 32,
+  "protected_tokens": 64,
+  "tasks": [],
+  "task_articles": 0,
+  "task_methods": [],
+  "stream_steps": 8,
+  "stream_articles": 2,
+  "diagnostic_articles": 2,
+  "diagnostic_methods": [
+    "bf16",
+    "diagonal",
+    "gaussian",
+    "csd"
+  ],
+  "stream_methods": [
+    "bf16",
+    "diagonal",
+    "gaussian",
+    "csd"
+  ],
+  "mechanism_methods": [
+    "bf16",
+    "diagonal",
+    "gaussian",
+    "csd",
+    "headwise",
+    "layerwise"
+  ],
+  "efficiency_methods": [
+    "bf16",
+    "eden_unbiased",
+    "drive",
+    "hqq1_key",
+    "diagonal",
+    "continued_diagonal",
+    "gaussian",
+    "csd",
+    "headwise",
+    "layerwise"
+  ],
+  "benchmark_warmup": 1,
+  "benchmark_repetitions": 3,
+  "recent_windows": [
+    64,
+    128
+  ],
+  "evaluation_batch_documents": 8,
+  "primary": {
+    "model": "qwen2_5_3b",
+    "context": 512,
+    "metric": "nll",
+    "comparator": "gaussian",
+    "minimum_gain": 0.01
+  }
+}

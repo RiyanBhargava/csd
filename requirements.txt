@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.10.0+cu128
+numpy==2.4.2
+scipy==1.16.3
+transformers==4.51.3
+datasets==4.7.0
+huggingface-hub==0.36.2
+tqdm==4.67.1
+rouge==1.0.1
+jieba==0.42.1
+fuzzywuzzy==0.18.0
+hqq==0.2.8.post1
+einops==0.8.2
+accelerate==1.13.0
+termcolor==3.3.0

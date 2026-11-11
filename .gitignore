@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.venv/
+archive/
+paper/
+paper*.zip
+results/*
+!results/*.json
+!results/*.json.gz
+checkpoints/
+*.log
+data/*.json.gz
+!data/exclusions.json.gz
